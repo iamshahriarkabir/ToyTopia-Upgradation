@@ -125,14 +125,14 @@ const Navbar = () => {
             {user ? (
               <div className="dropdown dropdown-end">
                 <div
-                  className="tooltip tooltip-bottom tooltip-warning"
+                  className="tooltip tooltip-bottom tooltip-accent"
                   data-tip={user.displayName}
                 >
                   <label
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar border border-teal-100 hover:border-teal-300 transition-colors hover:bg-transparent"
                   >
-                    <div className="w-10 rounded-full ring ring-orange-500 ring-offset-base-100 hover:ring-teal-500 ring-offset-2">
+                    <div className="w-10 rounded-full ring ring-teal-500 ring-offset-base-100 hover:ring-orange-500 ring-offset-2">
                       <img
                         src={
                           user.photoURL || "https://i.ibb.co/sd9jBbLp/user.png"
