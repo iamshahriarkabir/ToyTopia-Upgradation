@@ -1,6 +1,6 @@
 # 🧸 ToyTopia – A Local Kids Toy Store Platform
 
-![Project Banner](https://via.placeholder.com/1200x400/0f766e/ffffff?text=ToyTopia+Marketplace)
+![Project Banner](https://i.ibb.co.com/KjBVqGyB/Screenshot-2025-12-04-095748.png)
 
 **ToyTopia** is a vibrant and playful single-page application (SPA) designed as an online marketplace for kids' toys. It connects families with unique, local toy sellers through a modern, responsive, and secure platform. The application emphasizes a seamless user experience with advanced filtering, sorting, and authentication features.
 
@@ -52,7 +52,7 @@ Follow these steps to run the project locally on your machine.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/toytopia.git
+    git clone https://github.com/iamshahriarkabir/ToyTopia-Upgradation.git
     cd toytopia
     ```
 
@@ -97,3 +97,16 @@ ToyTopia/
 │   └── main.jsx         # Entry point
 ├── .env.local           # Environment variables
 └── package.json         # Dependencies and scripts
+```
+
+---
+
+---bash
+## 🌟 Future Improvements
+
+*   **Backend Integration:** Replace `toys.json` with a real database (MongoDB) to allow users to add/delete toys.
+*   **Cart System:** Implement a fully functional shopping cart and checkout process.
+*   **Payment Gateway:** Integration with Stripe or SSLCommerz.
+
+```
+Developed with ❤️ by [Z4CODE](https://github.com/iamshahriarkabir/)
