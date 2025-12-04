@@ -132,7 +132,7 @@ const Navbar = () => {
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar border border-teal-100 hover:border-teal-300 transition-colors hover:bg-transparent"
                   >
-                    <div className="w-10 rounded-full ring ring-teal-50 ring-offset-base-100 ring-offset-2">
+                    <div className="w-10 rounded-full ring ring-orange-500 ring-offset-base-100 hover:ring-teal-500 ring-offset-2">
                       <img
                         src={
                           user.photoURL || "https://i.ibb.co/sd9jBbLp/user.png"
@@ -183,7 +183,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   to="/register"
-                  className="px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-bold shadow-md hover:shadow-lg transition-all text-sm"
+                  className="px-6 py-2.5 bg-teal-600 hover:bg-orange-500 text-white rounded-full font-bold shadow-md hover:shadow-lg transition-all text-sm"
                 >
                   Register
                 </Link>
