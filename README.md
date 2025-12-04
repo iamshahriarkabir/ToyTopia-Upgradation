@@ -1,32 +1,99 @@
-# ToyTopia – A Local Kids Toy Store Platform
+# 🧸 ToyTopia – A Local Kids Toy Store Platform
 
-ToyTopia is a vibrant and playful online marketplace for kids' toys, designed to encourage families to discover and support local toy sellers. It is a fully responsive single-page application built with React.
+![Project Banner](https://via.placeholder.com/1200x400/0f766e/ffffff?text=ToyTopia+Marketplace)
 
-**Live URL:** [https://toytopiaz4.web.app/]
+**ToyTopia** is a vibrant and playful single-page application (SPA) designed as an online marketplace for kids' toys. It connects families with unique, local toy sellers through a modern, responsive, and secure platform. The application emphasizes a seamless user experience with advanced filtering, sorting, and authentication features.
 
----
-
-## Key Features
-
--   **Vibrant & Responsive UI:** A playful and clear user interface that works seamlessly on mobile, tablet, and desktop devices.
--   **Secure Authentication:** Full user authentication system using Firebase, including email/password registration, login, Google Sign-In, and a functional "Forgot Password" feature.
--   **Protected Routes:** User-specific pages like "Toy Details" and "My Profile" are protected, ensuring only logged-in users can access them.
--   **Engaging Home Page:** Features an interactive slider (using Swiper.js), a "Popular Toys" section, and scroll animations (using AOS) for an engaging user experience.
--   **Dynamic Content:** Toy data is loaded from a JSON file, and each page features a dynamic title for better user navigation and SEO.
--   **User Profile Management:** Logged-in users can view their profile information and update their name and photo URL, with changes saved directly to Firebase.
--   **User-Friendly Feedback:** Success and error messages are displayed using toast notifications for a smooth user experience.
--   **Error Handling:** A custom 404 "Not Found" page is implemented for invalid routes.
+🔗 **Live Website:** [Visit ToyTopia](https://toytopiaz4code.netlify.app)
 
 ---
 
-## NPM Packages Used
+## 🚀 Key Features
 
--   `react`: Core library for building the user interface.
--   `react-router`: For client-side routing.
--   `firebase`: For user authentication and other backend services.
--   `tailwindcss`: A utility-first CSS framework for styling.
--   `daisyui`: A Tailwind CSS component library for beautiful, pre-built components.
--   `swiper`: For the interactive and responsive home page slider.
--   `aos`: For "Animate On Scroll" effects.
--   `react-toastify`: For displaying user-friendly notifications.
--   `react-icons`: For easily including popular icons.
+### 🎨 User Experience (UX) & Design
+*   **Modern & Responsive UI:** Built with **Tailwind CSS v4** and **DaisyUI v5**, ensuring a pixel-perfect experience across Mobile, Tablet, and Desktop.
+*   **Interactive Animations:** Integrated **AOS (Animate On Scroll)** for smooth entry animations and **Swiper.js** for touch-friendly sliders.
+*   **Dynamic Page Titles:** Uses a custom hook to update the browser tab title dynamically based on the current route.
+*   **Toast Notifications:** Real-time success and error feedback using `react-toastify`.
+
+### 🔐 Authentication & Security
+*   **Firebase Authentication:** robust system supporting:
+    *   Email/Password Registration & Login.
+    *   Social Login (Google Sign-In).
+    *   Forgot Password functionality.
+*   **Protected Routes:** Secure routing ensures only authenticated users can access private pages like *My Profile* or *Cart*.
+*   **JWT/Auth State Persistence:** Keeps users logged in even after page reloads.
+
+### 🛍️ Product & Marketplace Features
+*   **Advanced Search & Filter:** Users can filter toys by **Category**, **Price Range**, and **Stock Availability**.
+*   **Sorting System:** Sort products by Price (Low to High / High to Low).
+*   **Product Details:** A public route showcasing detailed information about each toy, including seller info and ratings.
+*   **User Dashboard:** A dedicated profile page where users can update their display name and profile picture securely.
+
+---
+
+## 🛠️ Technology Stack
+
+*   **Frontend Framework:** [React 19](https://react.dev/) (Vite)
+*   **Routing:** [React Router v7](https://reactrouter.com/)
+*   **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
+*   **Authentication:** [Firebase Auth](https://firebase.google.com/)
+*   **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+*   **Animations:** [AOS](https://michalsnik.github.io/aos/) & [Swiper](https://swiperjs.com/)
+*   **Utilities:** `react-toastify`, `match-sorter`, `localforage`
+
+---
+
+## ⚙️ Local Installation Guide
+
+Follow these steps to run the project locally on your machine.
+
+**Prerequisites:** Node.js (v18+) installed.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/toytopia.git
+    cd toytopia
+    ```
+
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Setup:**
+    Create a `.env.local` file in the root directory and add your Firebase configuration keys:
+    ```env
+    VITE_apiKey=your_api_key
+    VITE_authDomain=your_auth_domain
+    VITE_projectId=your_project_id
+    VITE_storageBucket=your_storage_bucket
+    VITE_messagingSenderId=your_messaging_sender_id
+    VITE_appId=your_app_id
+    VITE_measurementId=your_measurement_id
+    ```
+
+4.  **Run the Project:**
+    ```bash
+    npm run dev
+    ```
+    The app should now be running at `http://localhost:5173`.
+
+---
+
+## 📂 Project Structure
+
+```bash
+ToyTopia/
+├── public/              # Static assets (images, toys.json)
+├── src/
+│   ├── components/      # Reusable components (Navbar, Footer, ToyCard)
+│   ├── contexts/        # Context API (AuthProvider)
+│   ├── firebase/        # Firebase configuration
+│   ├── hooks/           # Custom hooks (useTitle)
+│   ├── layouts/         # Main layout wrapper
+│   ├── pages/           # Page components (Home, AllToys, Login, etc.)
+│   ├── routes/          # Router configuration (Private & Public routes)
+│   └── main.jsx         # Entry point
+├── .env.local           # Environment variables
+└── package.json         # Dependencies and scripts
