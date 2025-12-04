@@ -101,7 +101,6 @@ ToyTopia/
 
 ---
 
----bash
 ## 🌟 Future Improvements
 
 *   **Backend Integration:** Replace `toys.json` with a real database (MongoDB) to allow users to add/delete toys.
