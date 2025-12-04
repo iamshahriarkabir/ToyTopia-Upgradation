@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Loading = () => {
-    return (
-        <div className="container mx-auto min-h-[600px] flex justify-center items-center">
-                <span className="loading loading-bars loading-xl"></span>
-        </div>
-    );
+  return (
+    <div className="container mx-auto min-h-[600px] flex justify-center items-center">
+      <span className="loading loading-bars loading-xl"></span>
+    </div>
+  );
 };
 
 export default Loading;

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from "react";
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
@@ -8,9 +8,9 @@ import {
   signInWithPopup,
   signOut,
   updateProfile,
-} from 'firebase/auth';
+} from "firebase/auth";
 
-import auth from '../firebase/firebase.config';
+import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 
@@ -40,29 +40,29 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
- const setUserInfo = (name, photo) => {
-    setLoading(true); 
+  const setUserInfo = (name, photo) => {
+    setLoading(true);
 
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo,
     })
-    .then(() => {
-        setUser(u => ({
-            ...u, 
-            displayName: name,
-            photoURL: photo,
+      .then(() => {
+        setUser((u) => ({
+          ...u,
+          displayName: name,
+          photoURL: photo,
         }));
-    })
-    .finally(() => { 
-        setLoading(false); 
-    });
-};
-  
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   const resetPassword = (email) => {
     setLoading(true);
     return sendPasswordResetEmail(auth, email);
-  }
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -83,7 +83,7 @@ const AuthProvider = ({ children }) => {
     signInWithGoogle,
     logOut,
     setUserInfo,
-    resetPassword
+    resetPassword,
   };
 
   return (
