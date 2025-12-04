@@ -108,5 +108,7 @@ ToyTopia/
 *   **Cart System:** Implement a fully functional shopping cart and checkout process.
 *   **Payment Gateway:** Integration with Stripe or SSLCommerz.
 
-```
-Developed with ❤️ by [Z4CODE](https://github.com/iamshahriarkabir/)
+---
+
+
+* **Developed with ❤️ by** [Z4CODE](https://github.com/iamshahriarkabir/)
